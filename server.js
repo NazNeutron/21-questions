@@ -15,7 +15,7 @@ var message = "";
 app.post('/sms', function(req, res) {
   
   var question = req.body.Body.toLowerCase();
-  var askForANOTHERONE = "Please enter a question starting with 'is it a', i.e. is it a person?";
+  var askForANOTHERONE = "Please enter what you think it is. Is it a ______ ? fill in the blank";
 
     if(questionCount == 0){
         message = "Hi Welcome to the 20 questions game may the odds forever be in your favor!";
@@ -30,7 +30,7 @@ app.post('/sms', function(req, res) {
         console.log(message);
     } 
     else {
-        message = "Sorry but you're out of questions try back in 4 hours mwuhahahahaha"
+        message = "Sorry but you're out of questions try back in 4 hours mwuhahahahaha";
      }
 
   function answer(){
@@ -85,7 +85,7 @@ app.post('/sms', function(req, res) {
 
 function burrito(){
     message = "You got it right!!!!";
-    questionCount = 21;
+    questionCount = 0;
 }
 
 function regularResponse(){
